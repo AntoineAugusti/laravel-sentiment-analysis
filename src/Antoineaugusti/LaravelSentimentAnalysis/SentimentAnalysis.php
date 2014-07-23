@@ -1,0 +1,79 @@
+<?php namespace Antoineaugusti\LaravelSentimentAnalysis;
+
+use PHPInsight\Sentiment;
+
+class SentimentAnalysis {
+
+	private $sentiment;
+
+	public function __construct()
+	{	
+		$this->sentiment = new Sentiment();
+	}
+
+	/**
+	 * Get the sentiment of a phrase
+	 * @param  string $string The given sentence
+	 * @return string Possible values: negative|neutral|positive
+	 */
+	public function decision($string)
+	{
+		// Do not call functions so that we'll compute only one time
+		$dominantClass = $this->sentiment->categorise($string);
+		
+		switch ($dominantClass) {
+			case 'neg':
+				return 'negative';
+				break;
+
+			case 'neu':
+				return 'neutral';
+				break;
+
+			case 'pos':
+				return 'positive';
+				break;
+		}
+	}
+
+	/**
+	 * Get the confidence of a decision for a result. The closer to 1, the better
+	 * @param  string $string The given sentence
+	 * @return float The confidence of a decision for a result. The close to 1, the better
+	 */
+	public function score($string)
+	{
+		$scores = $this->sentiment->score($string);
+		return $scores[$this->sentiment->categorise($string)];
+	}
+
+	/**
+	 * Tells if a sentence is positive
+	 * @param  string $string The given sentence
+	 * @return boolean
+	 */
+	public function isPositive($string)
+	{
+		return $this->decision($string) == 'positive';
+	}
+
+	/**
+	 * Tells if a sentence is negative
+	 * @param  string $string The given sentence
+	 * @return boolean
+	 */
+	public function isNegative($string)
+	{
+		return $this->decision($string) == 'negative';
+	}
+
+	/**
+	 * Tells if a sentence is neutral
+	 * @param  string $string The given sentence
+	 * @return boolean
+	 */
+	public function isNeutral($string)
+	{
+		return $this->decision($string) == 'neutral';
+	}
+}

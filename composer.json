@@ -1,0 +1,25 @@
+{
+    "name": "antoineaugusti/laravel-sentiment-analysis",
+    "description": "A Laravel wrapper that performs sentiment analysis over an English sentence",
+    "keywords": ["laravel", "framework", "sentiment analysis", "sentiment", "analysis", "Augusti", "Antoine Augusti", "AntoineAugusti"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Antoine Augusti",
+            "email": "antoine.augusti@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~4.2",
+        "jwhennessey/phpinsight": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Antoineaugusti\\LaravelSentimentAnalysis\\": "src/"
+        }
+    }
+}
