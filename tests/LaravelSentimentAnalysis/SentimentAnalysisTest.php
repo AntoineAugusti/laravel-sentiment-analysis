@@ -42,4 +42,17 @@ class SentimentAnalysisTest extends PHPUnit_Framework_TestCase {
 		// Negative
 		$this->assertEquals('negative', $this->sentiment->decision('Weather today is rubbish'));	
 	}
+
+	public function testScores()
+	{
+		$this->assertEquals(['negative' => 0.5, 'neutral' => 0.25, 'positive' => 0.25], $this->sentiment->scores("Weather today is rubbish"));
+		$this->assertEquals(['negative' => 0.33, 'neutral' => 0.33, 'positive' => 0.33], $this->sentiment->scores("To be or not to be?"));
+	}
+
+	public function testScore()
+	{
+		$this->assertEquals(0.5, $this->sentiment->score("Weather today is rubbish"));
+		$this->assertEquals(0.33, $this->sentiment->score("To be or not to be?"));
+		$this->assertEquals(0.57, $this->sentiment->score("Marie was enthusiastic about the upcoming trip. Her brother was also passionate about her leaving - he would finally have the house for himself."));
+	}
 }
