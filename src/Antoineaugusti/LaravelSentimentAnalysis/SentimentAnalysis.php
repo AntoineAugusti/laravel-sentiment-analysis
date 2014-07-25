@@ -30,11 +30,11 @@ class SentimentAnalysis {
 				break;
 
 			case 'neu':
-				return SELF::NEUTRAL;
+				return self::NEUTRAL;
 				break;
 
 			case 'pos':
-				return SELF::POSITIVE;
+				return self::POSITIVE;
 				break;
 		}
 	}
@@ -76,7 +76,7 @@ class SentimentAnalysis {
 	 */
 	public function isPositive($string)
 	{
-		return $this->decision($string) == SELF::POSITIVE;
+		return $this->decision($string) == self::POSITIVE;
 	}
 
 	/**
@@ -96,6 +96,6 @@ class SentimentAnalysis {
 	 */
 	public function isNeutral($string)
 	{
-		return $this->decision($string) == SELF::NEUTRAL;
+		return $this->decision($string) == self::NEUTRAL;
 	}
 }
