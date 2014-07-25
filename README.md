@@ -13,7 +13,7 @@ A Laravel wrapper for [phpInsight](https://github.com/JWHennessey/phpInsight).
 
 [PHP](https://php.net) 5.4+ or [HHVM](http://hhvm.com) 3.2+, and [Composer](https://getcomposer.org) are required.
 
-To get the latest version of Laravel Sentiment Analysis, simply require `"antoineaugusti/laravel-sentiment-analysis": "1.0.*"` in your `composer.json` file. You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
+To get the latest version of Laravel Sentiment Analysis, simply require `"antoineaugusti/laravel-sentiment-analysis": "1.1.*"` in your `composer.json` file. You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
 
 Once Laravel Sentiment Analysis is installed, you need to register the service provider. Open up `app/config/app.php` and add the following to the `providers` key.
 
@@ -40,3 +40,8 @@ Get the sentiment of a sentence. Will return `negative`, `neutral` or `positive`
 
 ### SentimentAnalysis::score($sentence)
 Get the confidence of a decision for a result. The closer to 1, the better!
+
+### SentimentAnalysis::scores($sentence)
+Get the score value for each decision. Returns an array. The closer to 1, the better! Return example:
+
+	['negative' => 0.5, 'neutral' => 0.25, 'positive' => 0.25]
