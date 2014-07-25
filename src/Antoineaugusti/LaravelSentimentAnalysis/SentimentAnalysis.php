@@ -5,6 +5,9 @@ use PHPInsight\Sentiment;
 class SentimentAnalysis {
 
 	private $sentiment;
+	const NEGATIVE = 'negative';
+	const NEUTRAL  = 'neutral';
+	const POSITIVE = 'positive';
 
 	public function __construct()
 	{	
@@ -23,15 +26,15 @@ class SentimentAnalysis {
 		
 		switch ($dominantClass) {
 			case 'neg':
-				return 'negative';
+				return self::NEGATIVE;
 				break;
 
 			case 'neu':
-				return 'neutral';
+				return SELF::NEUTRAL;
 				break;
 
 			case 'pos':
-				return 'positive';
+				return SELF::POSITIVE;
 				break;
 		}
 	}
@@ -54,7 +57,7 @@ class SentimentAnalysis {
 	 */
 	public function isPositive($string)
 	{
-		return $this->decision($string) == 'positive';
+		return $this->decision($string) == SELF::POSITIVE;
 	}
 
 	/**
@@ -64,7 +67,7 @@ class SentimentAnalysis {
 	 */
 	public function isNegative($string)
 	{
-		return $this->decision($string) == 'negative';
+		return $this->decision($string) == self::NEGATIVE;
 	}
 
 	/**
@@ -74,6 +77,6 @@ class SentimentAnalysis {
 	 */
 	public function isNeutral($string)
 	{
-		return $this->decision($string) == 'neutral';
+		return $this->decision($string) == SELF::NEUTRAL;
 	}
 }
