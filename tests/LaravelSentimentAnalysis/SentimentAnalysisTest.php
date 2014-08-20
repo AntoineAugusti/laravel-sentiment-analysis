@@ -6,11 +6,11 @@ class SentimentAnalysisTest extends PHPUnit_Framework_TestCase {
 	public $sentiment;
 	
 	public function setUp()
-    {
-        parent::setUp();
+	{
+		parent::setUp();
 
-        $this->sentiment = new SentimentAnalysis;
-    }
+		$this->sentiment = new SentimentAnalysis;
+	}
 
 	public function testIsPositive()
 	{
