@@ -11,17 +11,26 @@ A Laravel wrapper for [phpInsight](https://github.com/JWHennessey/phpInsight).
 
 ## Installation
 
-[PHP](https://php.net) 5.4+ or [HHVM](http://hhvm.com) 3.2+, and [Composer](https://getcomposer.org) are required.
+[PHP](https://php.net) 5.4+ or [HHVM](http://hhvm.com) 3.3+, and [Composer](https://getcomposer.org) are required.
 
-To get the latest version of Laravel Sentiment Analysis, simply require `"antoineaugusti/laravel-sentiment-analysis": "1.1.*"` in your `composer.json` file. You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
+To get the latest version of Laravel Sentiment Analysis, simply add the following line to the require block of your `composer.json` file:
 
-Once Laravel Sentiment Analysis is installed, you need to register the service provider. Open up `app/config/app.php` and add the following to the `providers` key.
+```
+"antoineaugusti/laravel-sentiment-analysis": "~2.0"
+```
 
-* `'Antoineaugusti\LaravelSentimentAnalysis\LaravelSentimentAnalysisServiceProvider'`
+You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
 
-You can register the SentimentAnalysis facade in the `aliases` key of your `app/config/app.php` file if you like.
+Once Laravel Sentiment Analysis is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
-* `'SentimentAnalysis' => 'Antoineaugusti\LaravelSentimentAnalysis\Facades\SentimentAnalysis'`
+`'Antoineaugusti\LaravelSentimentAnalysis\LaravelSentimentAnalysisServiceProvider'`
+
+You can register the SentimentAnalysis facade in the `aliases` key of your `config/app.php` file if you like.
+
+`SentimentAnalysis' => 'Antoineaugusti\LaravelSentimentAnalysis\Facades\SentimentAnalysis'`
+
+#### Looking for a Laravel 4 compatible version?
+Checkout the [1.1.1 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v1.1.1), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "1.1.1"`.
 
 ## Usage
 Sentences can be classified as **negative**, **neutral** or **positive**. The only supported language for the moment is **English**.
