@@ -9,9 +9,14 @@ class SentimentAnalysis {
 	const NEUTRAL  = 'neutral';
 	const POSITIVE = 'positive';
 
-	public function __construct()
-	{	
-		$this->sentiment = new Sentiment();
+    /**
+     * Class constructor
+     *
+     * @param bool|string $dataFolder base folder for custom dictionaries
+     */
+	public function __construct($dataFolder = false)
+	{
+		$this->sentiment = new Sentiment($dataFolder);
 	}
 
 	/**
@@ -23,7 +28,7 @@ class SentimentAnalysis {
 	{
 		// Do not call functions so that we'll compute only one time
 		$dominantClass = $this->sentiment->categorise($string);
-		
+
 		switch ($dominantClass) {
 			case 'neg':
 				return self::NEGATIVE;
@@ -54,7 +59,7 @@ class SentimentAnalysis {
 		// We will remap to 'negative' / 'neutral' / 'positive' and round with 2 digits
 		foreach ([self::NEGATIVE, self::NEUTRAL, self::POSITIVE] as $value)
 			$array[$value] = round($scores[substr($value, 0, 3)], 2);
-		
+
 		return $array;
 	}
 
