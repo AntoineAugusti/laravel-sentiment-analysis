@@ -15,9 +15,14 @@ class SentimentAnalysis
     const NEUTRAL = 'neutral';
     const POSITIVE = 'positive';
 
-    public function __construct()
+    /**
+     * Class constructor
+     *
+     * @param bool|string $dataFolder base folder for custom dictionaries
+     */
+    public function __construct($dataFolder = false)
     {
-        $this->sentiment = new Sentiment();
+        $this->sentiment = new Sentiment($dataFolder);
     }
 
     /**
