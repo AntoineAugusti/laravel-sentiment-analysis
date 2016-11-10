@@ -15,9 +15,14 @@ class SentimentAnalysis
     const NEUTRAL = 'neutral';
     const POSITIVE = 'positive';
 
-    public function __construct()
+    /**
+     * Class constructor
+     *
+     * @param bool|string $dataFolder base folder
+     */
+    public function __construct($dataFolder = false)
     {
-        $this->sentiment = new Sentiment();
+        $this->sentiment = new Sentiment($dataFolder);
     }
 
     /**
@@ -116,4 +121,5 @@ class SentimentAnalysis
     {
         return $this->decision($string) == self::NEUTRAL;
     }
+
 }
