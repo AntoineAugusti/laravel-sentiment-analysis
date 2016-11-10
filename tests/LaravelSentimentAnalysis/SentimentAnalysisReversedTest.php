@@ -10,7 +10,7 @@ class SentimentAnalysisReversedTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        /**
+        /*
          * The positive and negative data has been reversed.
          * Neutral/Positive/Ignore are the same.
          */
