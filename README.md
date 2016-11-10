@@ -26,6 +26,13 @@ You can register the SentimentAnalysis facade in the `aliases` key of your `app/
 ## Usage
 Sentences can be classified as **negative**, **neutral** or **positive**. The only supported language for the moment is **English**.
 
+## Custom Dictionary
+You can provide a custom dictionary by providing the path the folder when you create a new `SentimentAnalysis` object.
+
+`$analysis = new SentimentAnalysis(storage_path('custom_dictionary/'));`
+
+Please look at [the PHPInsight data files](https://github.com/JWHennessey/phpInsight/tree/master/lib/PHPInsight/data) to see how you should name and structure your files.
+
 ### SentimentAnalysis::isNegative($sentence)
 Returns a boolean telling if the given `$sentence` is classified as negative.
 
