@@ -16,7 +16,7 @@ class SentimentAnalysis
     const POSITIVE = 'positive';
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param bool|string $dataFolder base folder for custom dictionaries
      */
