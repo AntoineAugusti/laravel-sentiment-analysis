@@ -18,7 +18,7 @@ class SentimentAnalysis
     /**
      * Class constructor
      *
-     * @param bool|string $dataFolder base folder
+     * @param bool|string $dataFolder base folder for custom dictionaries
      */
     public function __construct($dataFolder = false)
     {
@@ -121,5 +121,4 @@ class SentimentAnalysis
     {
         return $this->decision($string) == self::NEUTRAL;
     }
-
 }
