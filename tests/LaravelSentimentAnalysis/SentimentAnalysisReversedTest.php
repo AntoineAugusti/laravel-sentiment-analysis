@@ -45,7 +45,7 @@ class SentimentAnalysisReversedTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('neutral', $this->sentiment->decision('She is seemingly very surprising'));
 
         // Negative
-        $this->assertEquals('positive', $this->sentiment->decision('Weather today is rubbish'));
+        $this->assertEquals('positive', $this->sentiment->decision('Weather today is very rubbish'));
     }
 
     public function testScores()
