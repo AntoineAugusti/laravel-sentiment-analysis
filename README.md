@@ -30,7 +30,7 @@ You can register the SentimentAnalysis facade in the `aliases` key of your `conf
 `SentimentAnalysis' => 'Antoineaugusti\LaravelSentimentAnalysis\Facades\SentimentAnalysis'`
 
 #### Looking for a Laravel 4 compatible version?
-Checkout the [1.1.1 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v1.1.1), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "1.1.1"`.
+Checkout the [1.2 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v1.2), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "1.2"`.
 
 ## Usage
 Sentences can be classified as **negative**, **neutral** or **positive**. The only supported language for the moment is **English**.
