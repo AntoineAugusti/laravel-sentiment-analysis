@@ -23,11 +23,11 @@ You'll then need to run `composer install` or `composer update` to download it a
 
 Once Laravel Sentiment Analysis is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
-`'Antoineaugusti\LaravelSentimentAnalysis\LaravelSentimentAnalysisServiceProvider'`
+Antoineaugusti\LaravelSentimentAnalysis\LaravelSentimentAnalysisServiceProvider::class,
 
 You can register the SentimentAnalysis facade in the `aliases` key of your `config/app.php` file if you like.
 
-`SentimentAnalysis' => 'Antoineaugusti\LaravelSentimentAnalysis\Facades\SentimentAnalysis'`
+'SentimentAnalysis' => Antoineaugusti\LaravelSentimentAnalysis\SentimentAnalysis::class,
 
 #### Looking for a Laravel 4 compatible version?
 Checkout the [1.2 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v1.2), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "1.2"`.
