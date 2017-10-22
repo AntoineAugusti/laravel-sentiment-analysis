@@ -21,5 +21,15 @@
         "psr-4": {
             "Antoineaugusti\\LaravelSentimentAnalysis\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Antoineaugusti\\LaravelSentimentAnalysis\\LaravelSentimentAnalysisServiceProvider"
+            ],
+            "aliases": {
+                "SentimentAnalysis": "Antoineaugusti\\LaravelSentimentAnalysis\\Facades\\SentimentAnalysis"
+            }
+        }
     }
 }
