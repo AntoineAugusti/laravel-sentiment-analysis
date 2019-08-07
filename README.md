@@ -5,6 +5,7 @@ Laravel Sentiment Analysis
 [![Build Status](https://img.shields.io/travis/AntoineAugusti/laravel-sentiment-analysis/master.svg?style=flat)](https://travis-ci.org/AntoineAugusti/laravel-sentiment-analysis)
 [![Software License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg?style=flat)](LICENSE.md)
 [![Latest Version](https://img.shields.io/github/release/AntoineAugusti/laravel-sentiment-analysis.svg?style=flat)](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases)
+![Packagist](https://img.shields.io/packagist/dt/AntoineAugusti/laravel-sentiment-analysis?style=flat-square)
 
 ## Introduction
 A Laravel wrapper for [phpInsight](https://github.com/JWHennessey/phpInsight).
