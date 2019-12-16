@@ -1,12 +1,13 @@
 <?php
 
 use Antoineaugusti\LaravelSentimentAnalysis\SentimentAnalysis;
+use PHPUnit\Framework\TestCase;
 
-class SentimentAnalysisTest extends PHPUnit_Framework_TestCase
+class SentimentAnalysisTest extends TestCase
 {
     public $sentiment;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
