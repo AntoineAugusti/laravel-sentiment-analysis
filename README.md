@@ -12,27 +12,18 @@ A Laravel wrapper for [phpInsight](https://github.com/JWHennessey/phpInsight).
 
 ## Installation
 
-[PHP](https://php.net) 5.4+ or [HHVM](http://hhvm.com) 3.3+, and [Composer](https://getcomposer.org) are required.
+[PHP](https://php.net) 7.2+, and [Composer](https://getcomposer.org) are required.
 
-To get the latest version of Laravel Sentiment Analysis, simply add the following line to the require block of your `composer.json` file:
-
-```json
-"antoineaugusti/laravel-sentiment-analysis": "~2.0"
-```
-
-You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
-
-This package supports auto discovery for Laravel 5.5+. If you don't have a version above 5.5 yet, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
-
-```php
-Antoineaugusti\LaravelSentimentAnalysis\LaravelSentimentAnalysisServiceProvider::class,
-```
+To get the latest version of Laravel Sentiment Analysis, run the command `composer require antoineaugusti/laravel-sentiment-analysis`.
 
 You can register the SentimentAnalysis facade in the `aliases` key of your `config/app.php` file if you like.
 
 ```php
 'SentimentAnalysis' => Antoineaugusti\LaravelSentimentAnalysis\SentimentAnalysis::class,
 ```
+
+#### Looking for a Laravel 5 compatible version?
+Checkout the [1.2 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v2.2), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "2.2"`.
 
 #### Looking for a Laravel 4 compatible version?
 Checkout the [1.2 version](https://github.com/AntoineAugusti/laravel-sentiment-analysis/releases/tag/v1.2), installable by requiring `"antoineaugusti/laravel-sentiment-analysis": "1.2"`.
